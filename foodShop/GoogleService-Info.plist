@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>442975562079-tm5tm5s9jl88dksote1pin6kmb3ecgkp.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.442975562079-tm5tm5s9jl88dksote1pin6kmb3ecgkp</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAtGFQWGo64_6L1MZC6vnHu4F13IC8qQVQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>442975562079</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.ozaltun.foodShop</string>
+	<key>PROJECT_ID</key>
+	<string>foodshop-e2da0</string>
+	<key>STORAGE_BUCKET</key>
+	<string>foodshop-e2da0.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:442975562079:ios:af09b237a872fbba182eea</string>
+</dict>
+</plist>
