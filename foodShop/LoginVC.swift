@@ -45,9 +45,10 @@ class LoginVC: UIViewController {
                 self.errorLabel.text = error!.localizedDescription
                 self.errorLabel.alpha = 1
             }else{
-                let homeViewPage = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? HomePageVC
-                self.view.window?.rootViewController = homeViewPage
-                self.view.window?.makeKeyAndVisible()
+                self.performSegue(withIdentifier: "logintoHome", sender: nil)
+               // let homeViewPage = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? HomePageVC
+               // self.view.window?.rootViewController = homeViewPage
+                //self.view.window?.makeKeyAndVisible()
             }
         }
     }

@@ -99,9 +99,10 @@ class SignUpVC: UIViewController {
         errorLabel.alpha = 1
     }
     func transitionToHome(){
-        let homeViewPage = storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? HomePageVC
-        view.window?.rootViewController = homeViewPage
-        view.window?.makeKeyAndVisible()
+        performSegue(withIdentifier: "signToHome", sender: nil)
+        //let homeViewPage = storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? HomePageVC
+        //view.window?.rootViewController = homeViewPage
+        //view.window?.makeKeyAndVisible()
     }
     
 }

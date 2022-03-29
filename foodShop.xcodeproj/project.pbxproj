@@ -23,6 +23,12 @@
 		0044AE0227F1DDEF00A89D36 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0044AE0127F1DDEF00A89D36 /* Utilities.swift */; };
 		0044AE0527F1EE0800A89D36 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0044AE0427F1EE0800A89D36 /* Constants.swift */; };
 		0044AE0A27F1F62900A89D36 /* FoodIntro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0044AE0927F1F62900A89D36 /* FoodIntro.mp4 */; };
+		0080E19D27F32098006FBEDF /* FoodDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0080E19C27F32098006FBEDF /* FoodDetailVC.swift */; };
+		0080E19F27F3275A006FBEDF /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0080E19E27F3275A006FBEDF /* Food.swift */; };
+		0080E1A127F328A9006FBEDF /* FoodBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0080E1A027F328A9006FBEDF /* FoodBasket.swift */; };
+		0080E1A427F332F0006FBEDF /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0080E1A327F332F0006FBEDF /* FoodTableViewCell.swift */; };
+		0080E1A627F34F8E006FBEDF /* BasketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0080E1A527F34F8E006FBEDF /* BasketTableViewCell.swift */; };
+		00BA5A4527F26A5400100A4B /* BasketVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BA5A4427F26A5400100A4B /* BasketVC.swift */; };
 		36A2005BCE07009BBD8F76CB /* Pods_foodShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC98B15EC367B332D1C21033 /* Pods_foodShop.framework */; };
 		A5ED1C20D3F39FC02037DFCD /* Pods_foodShopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5FD068EFB17E8062C138598 /* Pods_foodShopTests.framework */; };
 		C65E5D1F16C850B5CFE11338 /* Pods_foodShop_foodShopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD137779B8B97382D1A972D7 /* Pods_foodShop_foodShopUITests.framework */; };
@@ -66,6 +72,12 @@
 		0044AE0127F1DDEF00A89D36 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		0044AE0427F1EE0800A89D36 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0044AE0927F1F62900A89D36 /* FoodIntro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FoodIntro.mp4; sourceTree = "<group>"; };
+		0080E19C27F32098006FBEDF /* FoodDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailVC.swift; sourceTree = "<group>"; };
+		0080E19E27F3275A006FBEDF /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		0080E1A027F328A9006FBEDF /* FoodBasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBasket.swift; sourceTree = "<group>"; };
+		0080E1A327F332F0006FBEDF /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
+		0080E1A527F34F8E006FBEDF /* BasketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTableViewCell.swift; sourceTree = "<group>"; };
+		00BA5A4427F26A5400100A4B /* BasketVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketVC.swift; sourceTree = "<group>"; };
 		140EFB1C7F41B5146E0B859F /* Pods-foodShop-foodShopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodShop-foodShopUITests.debug.xcconfig"; path = "Target Support Files/Pods-foodShop-foodShopUITests/Pods-foodShop-foodShopUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		32995330E5F33B1CD85CA24C /* Pods-foodShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodShop.release.xcconfig"; path = "Target Support Files/Pods-foodShop/Pods-foodShop.release.xcconfig"; sourceTree = "<group>"; };
 		5A8DB2B16B76DA8382E79753 /* Pods-foodShop-foodShopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodShop-foodShopUITests.release.xcconfig"; path = "Target Support Files/Pods-foodShop-foodShopUITests/Pods-foodShop-foodShopUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,10 +146,15 @@
 				0044ADC927F1CA1000A89D36 /* AppDelegate.swift */,
 				0044AE0627F1F15000A89D36 /* Media */,
 				0044AE0327F1E1D700A89D36 /* Helpers */,
+				0080E1A227F328B0006FBEDF /* Model */,
 				0044ADCB27F1CA1000A89D36 /* SceneDelegate.swift */,
 				0044ADCD27F1CA1000A89D36 /* SplashVC.swift */,
 				0044ADFB27F1D44E00A89D36 /* HomePageVC.swift */,
 				0044ADCF27F1CA1100A89D36 /* Main.storyboard */,
+				0080E1A527F34F8E006FBEDF /* BasketTableViewCell.swift */,
+				0080E1A327F332F0006FBEDF /* FoodTableViewCell.swift */,
+				0080E19C27F32098006FBEDF /* FoodDetailVC.swift */,
+				00BA5A4427F26A5400100A4B /* BasketVC.swift */,
 				0044ADFF27F1DADC00A89D36 /* LoginVC.swift */,
 				0044ADFD27F1D80900A89D36 /* SignUpVC.swift */,
 				0044ADD227F1CA1200A89D36 /* Assets.xcassets */,
@@ -179,6 +196,15 @@
 				0044AE0927F1F62900A89D36 /* FoodIntro.mp4 */,
 			);
 			path = Media;
+			sourceTree = "<group>";
+		};
+		0080E1A227F328B0006FBEDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0080E19E27F3275A006FBEDF /* Food.swift */,
+				0080E1A027F328A9006FBEDF /* FoodBasket.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		0C0FE1397D7FE62016F8BFA0 /* Pods */ = {
@@ -445,14 +471,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0080E19F27F3275A006FBEDF /* Food.swift in Sources */,
 				0044ADCE27F1CA1000A89D36 /* SplashVC.swift in Sources */,
 				0044ADCA27F1CA1000A89D36 /* AppDelegate.swift in Sources */,
+				0080E1A427F332F0006FBEDF /* FoodTableViewCell.swift in Sources */,
 				0044AE0227F1DDEF00A89D36 /* Utilities.swift in Sources */,
+				0080E19D27F32098006FBEDF /* FoodDetailVC.swift in Sources */,
+				0080E1A127F328A9006FBEDF /* FoodBasket.swift in Sources */,
 				0044AE0027F1DADC00A89D36 /* LoginVC.swift in Sources */,
+				00BA5A4527F26A5400100A4B /* BasketVC.swift in Sources */,
 				0044ADFC27F1D44E00A89D36 /* HomePageVC.swift in Sources */,
 				0044ADFE27F1D80900A89D36 /* SignUpVC.swift in Sources */,
 				0044ADCC27F1CA1000A89D36 /* SceneDelegate.swift in Sources */,
 				0044AE0527F1EE0800A89D36 /* Constants.swift in Sources */,
+				0080E1A627F34F8E006FBEDF /* BasketTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
