@@ -413,15 +413,18 @@
                                                     </label>
                                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="DJ4-OR-6Im">
                                                         <rect key="frame" x="160" y="354" width="94" height="32"/>
+                                                        <connections>
+                                                            <action selector="stepperTapped:" destination="Zd0-YO-dzd" eventType="valueChanged" id="YZ0-Tw-0nP"/>
+                                                        </connections>
                                                     </stepper>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adet : 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vo3-aS-22r">
-                                                        <rect key="frame" x="179" y="394" width="56.5" height="20.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vo3-aS-22r">
+                                                        <rect key="frame" x="203.5" y="394" width="7.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yT-SP-haQ">
-                                                        <rect key="frame" x="95.5" y="430.5" width="223.5" height="85.5"/>
+                                                        <rect key="frame" x="95.5" y="473" width="223.5" height="43"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="ADD TO BASKET">
                                                             <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
@@ -430,19 +433,27 @@
                                                             <action selector="buttonAddBasket:" destination="Zd0-YO-dzd" eventType="touchUpInside" id="acO-xt-k4o"/>
                                                         </connections>
                                                     </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adet: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lia-Wd-WWp">
+                                                        <rect key="frame" x="156" y="394" width="45" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
+                                                    <constraint firstItem="vo3-aS-22r" firstAttribute="leading" secondItem="Lia-Wd-WWp" secondAttribute="trailing" constant="2.5" id="0bd-Yb-Y2F"/>
                                                     <constraint firstItem="3yT-SP-haQ" firstAttribute="centerX" secondItem="P7x-gN-8ao" secondAttribute="centerX" id="29N-rh-pdM"/>
                                                     <constraint firstItem="xJS-cY-4Wf" firstAttribute="top" secondItem="P7x-gN-8ao" secondAttribute="top" constant="8" id="2sy-hx-Xv8"/>
-                                                    <constraint firstItem="vo3-aS-22r" firstAttribute="centerX" secondItem="P7x-gN-8ao" secondAttribute="centerX" id="4dr-l3-ZQQ"/>
                                                     <constraint firstItem="DJ4-OR-6Im" firstAttribute="centerX" secondItem="P7x-gN-8ao" secondAttribute="centerX" id="6jG-7e-ucD"/>
                                                     <constraint firstItem="JGt-eB-ofm" firstAttribute="top" secondItem="h5e-N4-itO" secondAttribute="bottom" constant="8" id="7FG-SS-w6s"/>
                                                     <constraint firstAttribute="bottom" secondItem="3yT-SP-haQ" secondAttribute="bottom" constant="16" id="B8k-ka-BJh"/>
+                                                    <constraint firstItem="vo3-aS-22r" firstAttribute="top" secondItem="DJ4-OR-6Im" secondAttribute="bottom" constant="8" id="EPZ-QT-snA"/>
                                                     <constraint firstItem="h5e-N4-itO" firstAttribute="centerX" secondItem="P7x-gN-8ao" secondAttribute="centerX" id="KFc-Bc-T9N"/>
+                                                    <constraint firstItem="Lia-Wd-WWp" firstAttribute="top" secondItem="DJ4-OR-6Im" secondAttribute="bottom" constant="8" id="R3s-NT-6c2"/>
                                                     <constraint firstItem="DJ4-OR-6Im" firstAttribute="top" secondItem="JGt-eB-ofm" secondAttribute="bottom" constant="8" id="XNL-wh-IS6"/>
-                                                    <constraint firstItem="vo3-aS-22r" firstAttribute="top" secondItem="DJ4-OR-6Im" secondAttribute="bottom" constant="8" id="lqc-wb-LZy"/>
-                                                    <constraint firstItem="3yT-SP-haQ" firstAttribute="top" secondItem="vo3-aS-22r" secondAttribute="bottom" constant="16" id="ofu-PE-HpA"/>
+                                                    <constraint firstItem="vo3-aS-22r" firstAttribute="centerX" secondItem="P7x-gN-8ao" secondAttribute="centerX" id="l9V-wJ-rdI"/>
+                                                    <constraint firstItem="vo3-aS-22r" firstAttribute="centerY" secondItem="Lia-Wd-WWp" secondAttribute="centerY" id="rH8-1w-5N0"/>
                                                     <constraint firstItem="xJS-cY-4Wf" firstAttribute="centerX" secondItem="P7x-gN-8ao" secondAttribute="centerX" id="yu0-GW-bHG"/>
                                                     <constraint firstItem="h5e-N4-itO" firstAttribute="top" secondItem="xJS-cY-4Wf" secondAttribute="bottom" constant="8" id="zHb-zv-ZZr"/>
                                                     <constraint firstItem="JGt-eB-ofm" firstAttribute="centerX" secondItem="P7x-gN-8ao" secondAttribute="centerX" id="zXL-7B-oCh"/>

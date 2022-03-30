@@ -6,13 +6,17 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class BasketVC: UIViewController {
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var basketTableView: UITableView!
     
-    var foodList = [Food]()
+    var foodList = [FoodBasket]()
+    var userName = Auth.auth().currentUser?.email
+    
+    var basketPresenter:ViewToPresenterBasketProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,13 +29,12 @@ class BasketVC: UIViewController {
         basketTableView.delegate = self
         basketTableView.dataSource = self
         
-        let f1 = Food(foodId: 1, foodName: "Ayran", foodImageName: "ayran", foodPrice: 12)
-        let f2 = Food(foodId: 2, foodName: "Fanta", foodImageName: "fanta", foodPrice: 15)
-        let f3 = Food(foodId: 3, foodName: "Baklava", foodImageName: "baklava", foodPrice: 20)
-        foodList.append(f1)
-        foodList.append(f2)
-        foodList.append(f3)
+        BasketRouter.createModule(ref: self)
        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        
+        basketPresenter?.loadFood(userName: userName!)
     }
     func showUI(){
         
@@ -51,6 +54,18 @@ class BasketVC: UIViewController {
         
     }
 }
+extension BasketVC : PresenterToViewBasketProtocol {
+    func sendDataToView(foodList: Array<FoodBasket>) {
+        self.foodList = foodList
+        DispatchQueue.main.async {
+            self.basketTableView.reloadData()
+        }
+        
+    }
+    
+    
+}
+
 extension BasketVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foodList.count
@@ -61,9 +76,13 @@ extension BasketVC : UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "basketCell", for: indexPath)
         as! BasketTableViewCell
         
-        cell.basketFoodImageView.image = UIImage(named: foodBasket.foodImageName!)
-        cell.basketFoodNameLabel.text = foodBasket.foodName
-        cell.basketFoodPriceLabel.text = "\(foodBasket.foodPrice!) ₺"
+        if let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(foodBasket.yemek_resim_adi!)") {
+                DispatchQueue.main.async {
+                    cell.basketFoodImageView.kf.setImage(with:url)
+                }
+            }
+        cell.basketFoodNameLabel.text = foodBasket.yemek_adi
+        cell.basketFoodPriceLabel.text = "\(foodBasket.yemek_fiyat!) ₺"
         cell.basketFoodOrderedLabel.text = "1"
         
         cell.backgroundColor = UIColor.init(white: 0.95, alpha: 1)
@@ -79,7 +98,7 @@ extension BasketVC : UITableViewDelegate, UITableViewDataSource {
         let deleteAction = UIContextualAction(style: .destructive, title: ""){(contextualAction,view,bool) in
             let food = self.foodList[indexPath.row]
             
-            let alert = UIAlertController(title: "Delete", message: "Are you sure delete \(food.foodName!) note ?", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Delete", message: "Are you sure delete \(food.yemek_adi!) note ?", preferredStyle: .alert)
             self.present(alert,animated: true)
             
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel){action in
@@ -88,9 +107,8 @@ extension BasketVC : UITableViewDelegate, UITableViewDataSource {
             alert.addAction(cancelAction)
             
             let yesAction = UIAlertAction(title: "Yes", style: .destructive){action in
-                print("\(food.foodName!) Deleted")
-                self.foodList.remove(at: indexPath.row)
-                tableView.reloadData()
+                self.basketPresenter?.delete(basketFoodId: (food.sepet_yemek_id!), userName: self.userName!)
+                
             }
             alert.addAction(yesAction)
         }

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Kingfisher
 
 class FoodDetailVC: UIViewController {
 
@@ -18,29 +20,53 @@ class FoodDetailVC: UIViewController {
     @IBOutlet weak var foodImage: UIImageView!
     
     var food:Food?
+    var foodBasket:FoodBasket?
+    
+    //get current username
+    var userName = Auth.auth().currentUser?.email
+    var addtoBasketPresenter : ViewToPresenterAddToBasketProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         showUI()
         
+        AddToBasketRouter.createModule(ref: self)
+        
+        foodOrderedLabel.text = "1"
+        
+       
+        
         if let f = food {
-            foodImage.image = UIImage(named: f.foodImageName!)
-            foodNameLabel.text = f.foodName
-            foodPriceLabel.text = "\(f.foodPrice!) ₺"
-            
+            foodNameLabel.text = f.yemek_adi
+            foodPriceLabel.text = String(f.yemek_fiyat!)
+            if let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(f.yemek_resim_adi!)") {
+                    DispatchQueue.main.async {
+                        self.foodImage.kf.setImage(with:url)
+                    }
+                }
         }
     }
     
+   
+    @IBAction func stepperTapped(_ sender: UIStepper) {
+        foodOrderedLabel.text = "\(String(Int(sender.value)))"
+    }
     @IBAction func chartIconTapped(_ sender: Any) {
         performSegue(withIdentifier: "detailToBasket", sender: nil)
     }
     
     @IBAction func buttonAddBasket(_ sender: Any) {
-        if let f = food {
-            print("\(f.foodName!) added to basket ")
+        
+        
+        
+        if let fImage = food?.yemek_resim_adi, let fName = foodNameLabel.text, let foodPrice = foodPriceLabel.text,
+           let fOrdered = foodOrderedLabel.text, let userName = userName{
+            
+            addtoBasketPresenter?.add(foodImageName: fImage, foodName: fName, foodPrice: foodPrice, foodOrdered: fOrdered, userName: userName )
         }
-       
+        
     }
+   
     func showUI(){
         
         //TopView UI

@@ -7,6 +7,8 @@
 
 import UIKit
 import FirebaseAuth
+import Kingfisher
+
 
 class HomePageVC: UIViewController {
 
@@ -16,6 +18,8 @@ class HomePageVC: UIViewController {
     @IBOutlet weak var foodTableView: UITableView!
     
     var foodList = [Food]()
+    
+    var homePagePresenter : ViewToPresenterHomePageProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,31 +31,14 @@ class HomePageVC: UIViewController {
         foodTableView.delegate = self
         foodTableView.dataSource = self
         
+        HomePageRouter.createModule(ref: self)
+        
         //Seperator Color
         foodTableView.separatorColor = UIColor(white: 0.95, alpha: 1)
         
-        let f1 = Food(foodId: 1, foodName: "Fanta", foodImageName: "fanta", foodPrice: 10)
-        let f2 = Food(foodId: 2, foodName: "Ayran", foodImageName: "ayran", foodPrice: 5)
-        let f3 = Food(foodId: 3, foodName: "Baklava", foodImageName: "baklava", foodPrice: 20)
-        let f4 = Food(foodId: 4, foodName: "Izgara Somon", foodImageName: "izgarasomon", foodPrice: 70)
-        let f5 = Food(foodId: 5, foodName: "Izgara Tavuk", foodImageName: "izgaratavuk", foodPrice: 40)
-        let f6 = Food(foodId: 6, foodName: "Kadayıf", foodImageName: "kadayif", foodPrice: 15)
-        foodList.append(f1)
-        foodList.append(f2)
-        foodList.append(f3)
-        foodList.append(f4)
-        foodList.append(f5)
-        foodList.append(f6)
-        
     }
-   
-    @IBAction func buttonSignOut(_ sender: Any) {
-        if FirebaseAuth.Auth.auth().currentUser != nil {
-            
-            do{
-                try FirebaseAuth.Auth.auth().signOut()
-            }catch{ print("Error")}
-        }
+    override func viewWillAppear(_ animated: Bool) {
+        homePagePresenter?.loadFood()
     }
         func showUI(){
             
@@ -70,6 +57,15 @@ class HomePageVC: UIViewController {
             bottomView.layer.shadowOffset = CGSize(width: 3, height: 3)
         }
 }
+extension HomePageVC : PresenterToViewHomePageProtocol {
+    func sendDataToView(foodList: Array<Food>) {
+        self.foodList = foodList
+        DispatchQueue.main.async {
+            self.foodTableView.reloadData()
+        }
+    }
+}
+
 extension HomePageVC : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print("Arama sonucu : \(searchText)")
@@ -85,9 +81,17 @@ extension HomePageVC : UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell", for: indexPath)
         as! FoodTableViewCell
         
-        cell.foodImageView.image = UIImage(named: food.foodImageName!)
-        cell.foodNameLabel.text = food.foodName
-        cell.foodPriceLabel.text = "\(food.foodPrice!) ₺"
+        
+        if let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(food.yemek_resim_adi!)") {
+                DispatchQueue.main.async {
+                    cell.foodImageView.kf.setImage(with:url)
+                }
+            }
+        
+        
+        cell.foodImageView.image = UIImage(named: food.yemek_resim_adi!)
+        cell.foodNameLabel.text = food.yemek_adi
+        cell.foodPriceLabel.text = "\(food.yemek_fiyat!) ₺"
         
         cell.backgroundColor = UIColor.init(white: 0.95, alpha: 1)
         cell.cellBackground.layer.cornerRadius = 30.0

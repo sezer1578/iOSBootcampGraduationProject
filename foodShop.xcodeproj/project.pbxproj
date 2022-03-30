@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00393FFC27F4B46A0021D31F /* AddToBasketProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00393FFB27F4B46A0021D31F /* AddToBasketProtocols.swift */; };
+		00393FFE27F4BC780021D31F /* AddToBasketInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00393FFD27F4BC780021D31F /* AddToBasketInteractor.swift */; };
+		0039400027F4BC9A0021D31F /* AddToBasketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00393FFF27F4BC9A0021D31F /* AddToBasketPresenter.swift */; };
+		0039400227F4BCAE0021D31F /* AddToBasketRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0039400127F4BCAE0021D31F /* AddToBasketRouter.swift */; };
+		0039400A27F4C1250021D31F /* BasketProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0039400927F4C1250021D31F /* BasketProtocols.swift */; };
+		0039400C27F4C1320021D31F /* BasketInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0039400B27F4C1320021D31F /* BasketInteractor.swift */; };
+		0039400E27F4C13E0021D31F /* BasketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0039400D27F4C13E0021D31F /* BasketPresenter.swift */; };
+		0039401027F4C1470021D31F /* BasketRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0039400F27F4C1470021D31F /* BasketRouter.swift */; };
+		0039401327F4CECA0021D31F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0039401227F4CECA0021D31F /* Alamofire */; };
+		0039401527F4CF9D0021D31F /* FoodResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0039401427F4CF9D0021D31F /* FoodResponse.swift */; };
+		0039401F27F4D3F90021D31F /* HomePageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0039401E27F4D3F90021D31F /* HomePageProtocols.swift */; };
+		0039402127F4D5530021D31F /* HomePageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0039402027F4D5530021D31F /* HomePageInteractor.swift */; };
+		0039402327F4D5680021D31F /* HomePagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0039402227F4D5680021D31F /* HomePagePresenter.swift */; };
+		0039402527F4D57A0021D31F /* HomePageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0039402427F4D57A0021D31F /* HomePageRouter.swift */; };
+		0039402827F4E6090021D31F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0039402727F4E6090021D31F /* Kingfisher */; };
+		0039402A27F4EA950021D31F /* FoodBasketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0039402927F4EA950021D31F /* FoodBasketResponse.swift */; };
 		0044ADCA27F1CA1000A89D36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0044ADC927F1CA1000A89D36 /* AppDelegate.swift */; };
 		0044ADCC27F1CA1000A89D36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0044ADCB27F1CA1000A89D36 /* SceneDelegate.swift */; };
 		0044ADCE27F1CA1000A89D36 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0044ADCD27F1CA1000A89D36 /* SplashVC.swift */; };
@@ -52,6 +68,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00393FFB27F4B46A0021D31F /* AddToBasketProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToBasketProtocols.swift; sourceTree = "<group>"; };
+		00393FFD27F4BC780021D31F /* AddToBasketInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToBasketInteractor.swift; sourceTree = "<group>"; };
+		00393FFF27F4BC9A0021D31F /* AddToBasketPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToBasketPresenter.swift; sourceTree = "<group>"; };
+		0039400127F4BCAE0021D31F /* AddToBasketRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToBasketRouter.swift; sourceTree = "<group>"; };
+		0039400927F4C1250021D31F /* BasketProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketProtocols.swift; sourceTree = "<group>"; };
+		0039400B27F4C1320021D31F /* BasketInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketInteractor.swift; sourceTree = "<group>"; };
+		0039400D27F4C13E0021D31F /* BasketPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketPresenter.swift; sourceTree = "<group>"; };
+		0039400F27F4C1470021D31F /* BasketRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRouter.swift; sourceTree = "<group>"; };
+		0039401427F4CF9D0021D31F /* FoodResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodResponse.swift; sourceTree = "<group>"; };
+		0039401E27F4D3F90021D31F /* HomePageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageProtocols.swift; sourceTree = "<group>"; };
+		0039402027F4D5530021D31F /* HomePageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageInteractor.swift; sourceTree = "<group>"; };
+		0039402227F4D5680021D31F /* HomePagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePagePresenter.swift; sourceTree = "<group>"; };
+		0039402427F4D57A0021D31F /* HomePageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageRouter.swift; sourceTree = "<group>"; };
+		0039402927F4EA950021D31F /* FoodBasketResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBasketResponse.swift; sourceTree = "<group>"; };
 		0044ADC627F1CA1000A89D36 /* foodShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0044ADC927F1CA1000A89D36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0044ADCB27F1CA1000A89D36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,7 +124,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0039402827F4E6090021D31F /* Kingfisher in Frameworks */,
 				36A2005BCE07009BBD8F76CB /* Pods_foodShop.framework in Frameworks */,
+				0039401327F4CECA0021D31F /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +149,162 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00393FF527F4B3840021D31F /* addfood-module */ = {
+			isa = PBXGroup;
+			children = (
+				00393FFA27F4B3DC0021D31F /* view */,
+				00393FF927F4B3D80021D31F /* router */,
+				00393FF827F4B3D10021D31F /* presenter */,
+				00393FF727F4B3CA0021D31F /* interactor */,
+				00393FF627F4B3C40021D31F /* protocols */,
+			);
+			path = "addfood-module";
+			sourceTree = "<group>";
+		};
+		00393FF627F4B3C40021D31F /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				00393FFB27F4B46A0021D31F /* AddToBasketProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		00393FF727F4B3CA0021D31F /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				00393FFD27F4BC780021D31F /* AddToBasketInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		00393FF827F4B3D10021D31F /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				00393FFF27F4BC9A0021D31F /* AddToBasketPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		00393FF927F4B3D80021D31F /* router */ = {
+			isa = PBXGroup;
+			children = (
+				0039400127F4BCAE0021D31F /* AddToBasketRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		00393FFA27F4B3DC0021D31F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				0080E19C27F32098006FBEDF /* FoodDetailVC.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		0039400327F4C0D20021D31F /* foodbasket-module */ = {
+			isa = PBXGroup;
+			children = (
+				0039400827F4C0FD0021D31F /* view */,
+				0039400727F4C0F70021D31F /* router */,
+				0039400627F4C0F20021D31F /* presenter */,
+				0039400527F4C0ED0021D31F /* interactor */,
+				0039400427F4C0E70021D31F /* protocols */,
+			);
+			path = "foodbasket-module";
+			sourceTree = "<group>";
+		};
+		0039400427F4C0E70021D31F /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0039400927F4C1250021D31F /* BasketProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		0039400527F4C0ED0021D31F /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				0039400B27F4C1320021D31F /* BasketInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		0039400627F4C0F20021D31F /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0039400D27F4C13E0021D31F /* BasketPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		0039400727F4C0F70021D31F /* router */ = {
+			isa = PBXGroup;
+			children = (
+				0039400F27F4C1470021D31F /* BasketRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		0039400827F4C0FD0021D31F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				00BA5A4427F26A5400100A4B /* BasketVC.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		0039401627F4D38A0021D31F /* homepage-module */ = {
+			isa = PBXGroup;
+			children = (
+				0039401D27F4D3D50021D31F /* view */,
+				0039401C27F4D3CD0021D31F /* router */,
+				0039401927F4D3B40021D31F /* presenter */,
+				0039401827F4D3A90021D31F /* interactor */,
+				0039401727F4D3A30021D31F /* protocols */,
+			);
+			path = "homepage-module";
+			sourceTree = "<group>";
+		};
+		0039401727F4D3A30021D31F /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0039401E27F4D3F90021D31F /* HomePageProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		0039401827F4D3A90021D31F /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				0039402027F4D5530021D31F /* HomePageInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		0039401927F4D3B40021D31F /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0039402227F4D5680021D31F /* HomePagePresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		0039401C27F4D3CD0021D31F /* router */ = {
+			isa = PBXGroup;
+			children = (
+				0039402427F4D57A0021D31F /* HomePageRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		0039401D27F4D3D50021D31F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				0044ADFB27F1D44E00A89D36 /* HomePageVC.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		0044ADBD27F1CA1000A89D36 = {
 			isa = PBXGroup;
 			children = (
@@ -147,14 +335,14 @@
 				0044AE0627F1F15000A89D36 /* Media */,
 				0044AE0327F1E1D700A89D36 /* Helpers */,
 				0080E1A227F328B0006FBEDF /* Model */,
-				0044ADCB27F1CA1000A89D36 /* SceneDelegate.swift */,
+				00393FF527F4B3840021D31F /* addfood-module */,
+				0039400327F4C0D20021D31F /* foodbasket-module */,
+				0039401627F4D38A0021D31F /* homepage-module */,
 				0044ADCD27F1CA1000A89D36 /* SplashVC.swift */,
-				0044ADFB27F1D44E00A89D36 /* HomePageVC.swift */,
+				0044ADCB27F1CA1000A89D36 /* SceneDelegate.swift */,
 				0044ADCF27F1CA1100A89D36 /* Main.storyboard */,
 				0080E1A527F34F8E006FBEDF /* BasketTableViewCell.swift */,
 				0080E1A327F332F0006FBEDF /* FoodTableViewCell.swift */,
-				0080E19C27F32098006FBEDF /* FoodDetailVC.swift */,
-				00BA5A4427F26A5400100A4B /* BasketVC.swift */,
 				0044ADFF27F1DADC00A89D36 /* LoginVC.swift */,
 				0044ADFD27F1D80900A89D36 /* SignUpVC.swift */,
 				0044ADD227F1CA1200A89D36 /* Assets.xcassets */,
@@ -203,6 +391,8 @@
 			children = (
 				0080E19E27F3275A006FBEDF /* Food.swift */,
 				0080E1A027F328A9006FBEDF /* FoodBasket.swift */,
+				0039401427F4CF9D0021D31F /* FoodResponse.swift */,
+				0039402927F4EA950021D31F /* FoodBasketResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -248,6 +438,10 @@
 			dependencies = (
 			);
 			name = foodShop;
+			packageProductDependencies = (
+				0039401227F4CECA0021D31F /* Alamofire */,
+				0039402727F4E6090021D31F /* Kingfisher */,
+			);
 			productName = foodShop;
 			productReference = 0044ADC627F1CA1000A89D36 /* foodShop.app */;
 			productType = "com.apple.product-type.application";
@@ -323,6 +517,10 @@
 				Base,
 			);
 			mainGroup = 0044ADBD27F1CA1000A89D36;
+			packageReferences = (
+				0039401127F4CECA0021D31F /* XCRemoteSwiftPackageReference "Alamofire" */,
+				0039402627F4E6090021D31F /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 0044ADC727F1CA1000A89D36 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -473,18 +671,32 @@
 			files = (
 				0080E19F27F3275A006FBEDF /* Food.swift in Sources */,
 				0044ADCE27F1CA1000A89D36 /* SplashVC.swift in Sources */,
+				0039400C27F4C1320021D31F /* BasketInteractor.swift in Sources */,
 				0044ADCA27F1CA1000A89D36 /* AppDelegate.swift in Sources */,
 				0080E1A427F332F0006FBEDF /* FoodTableViewCell.swift in Sources */,
 				0044AE0227F1DDEF00A89D36 /* Utilities.swift in Sources */,
+				0039400027F4BC9A0021D31F /* AddToBasketPresenter.swift in Sources */,
 				0080E19D27F32098006FBEDF /* FoodDetailVC.swift in Sources */,
 				0080E1A127F328A9006FBEDF /* FoodBasket.swift in Sources */,
+				00393FFE27F4BC780021D31F /* AddToBasketInteractor.swift in Sources */,
+				0039402527F4D57A0021D31F /* HomePageRouter.swift in Sources */,
 				0044AE0027F1DADC00A89D36 /* LoginVC.swift in Sources */,
+				0039402A27F4EA950021D31F /* FoodBasketResponse.swift in Sources */,
+				00393FFC27F4B46A0021D31F /* AddToBasketProtocols.swift in Sources */,
 				00BA5A4527F26A5400100A4B /* BasketVC.swift in Sources */,
+				0039401F27F4D3F90021D31F /* HomePageProtocols.swift in Sources */,
 				0044ADFC27F1D44E00A89D36 /* HomePageVC.swift in Sources */,
+				0039400227F4BCAE0021D31F /* AddToBasketRouter.swift in Sources */,
+				0039402327F4D5680021D31F /* HomePagePresenter.swift in Sources */,
 				0044ADFE27F1D80900A89D36 /* SignUpVC.swift in Sources */,
+				0039402127F4D5530021D31F /* HomePageInteractor.swift in Sources */,
+				0039400A27F4C1250021D31F /* BasketProtocols.swift in Sources */,
+				0039400E27F4C13E0021D31F /* BasketPresenter.swift in Sources */,
+				0039401027F4C1470021D31F /* BasketRouter.swift in Sources */,
 				0044ADCC27F1CA1000A89D36 /* SceneDelegate.swift in Sources */,
 				0044AE0527F1EE0800A89D36 /* Constants.swift in Sources */,
 				0080E1A627F34F8E006FBEDF /* BasketTableViewCell.swift in Sources */,
+				0039401527F4CF9D0021D31F /* FoodResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -828,6 +1040,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0039401127F4CECA0021D31F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		0039402627F4E6090021D31F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0039401227F4CECA0021D31F /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0039401127F4CECA0021D31F /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		0039402727F4E6090021D31F /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0039402627F4E6090021D31F /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0044ADBE27F1CA1000A89D36 /* Project object */;
 }
