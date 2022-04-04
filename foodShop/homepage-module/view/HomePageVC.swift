@@ -16,10 +16,11 @@ class HomePageVC: UIViewController {
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var foodTableView: UITableView!
+    @IBOutlet weak var basketIcon: UIBarButtonItem!
     
     var foodList = [Food]()
-    
     var homePagePresenter : ViewToPresenterHomePageProtocol?
+    var emailAddress = Auth.auth().currentUser?.email
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,7 @@ class HomePageVC: UIViewController {
         
         view.backgroundColor = UIColor.init(white: 0.95, alpha: 1)
         //Delegate
-        searchBar.delegate = self
+       
         foodTableView.delegate = self
         foodTableView.dataSource = self
         
@@ -35,11 +36,16 @@ class HomePageVC: UIViewController {
         
         //Seperator Color
         foodTableView.separatorColor = UIColor(white: 0.95, alpha: 1)
-        
+       
+       
+    
     }
     override func viewWillAppear(_ animated: Bool) {
         homePagePresenter?.loadFood()
+        //self.navigationController?.navigationBar.isHidden = true
+       
     }
+
         func showUI(){
             
             //TopView UI
@@ -66,11 +72,6 @@ extension HomePageVC : PresenterToViewHomePageProtocol {
     }
 }
 
-extension HomePageVC : UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("Arama sonucu : \(searchText)")
-    }
-}
 extension HomePageVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foodList.count

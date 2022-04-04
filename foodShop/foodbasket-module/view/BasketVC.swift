@@ -13,6 +13,7 @@ class BasketVC: UIViewController {
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var basketTableView: UITableView!
     
+    
     var foodList = [FoodBasket]()
     var userName = Auth.auth().currentUser?.email
     
@@ -52,6 +53,8 @@ class BasketVC: UIViewController {
         bottomView.layer.shadowOpacity = 0.3
         bottomView.layer.shadowOffset = CGSize(width: 3, height: 3)
         
+       
+        
     }
 }
 extension BasketVC : PresenterToViewBasketProtocol {
@@ -62,8 +65,6 @@ extension BasketVC : PresenterToViewBasketProtocol {
         }
         
     }
-    
-    
 }
 
 extension BasketVC : UITableViewDelegate, UITableViewDataSource {
@@ -82,12 +83,12 @@ extension BasketVC : UITableViewDelegate, UITableViewDataSource {
                 }
             }
         cell.basketFoodNameLabel.text = foodBasket.yemek_adi
-        cell.basketFoodPriceLabel.text = "\(foodBasket.yemek_fiyat!) ₺"
-        cell.basketFoodOrderedLabel.text = "1"
+        cell.basketFoodPriceLabel.text = "Fiyat: \(foodBasket.yemek_fiyat!) ₺"
+        cell.basketFoodOrderedLabel.text = "Adet: \(foodBasket.yemek_siparis_adet!)"
         
         cell.backgroundColor = UIColor.init(white: 0.95, alpha: 1)
         cell.cellBackground.layer.cornerRadius = 30.0
-        
+
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -98,15 +99,15 @@ extension BasketVC : UITableViewDelegate, UITableViewDataSource {
         let deleteAction = UIContextualAction(style: .destructive, title: ""){(contextualAction,view,bool) in
             let food = self.foodList[indexPath.row]
             
-            let alert = UIAlertController(title: "Delete", message: "Are you sure delete \(food.yemek_adi!) note ?", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Sil", message: "\(food.yemek_adi!) sepetinden silinsin mi?", preferredStyle: .alert)
             self.present(alert,animated: true)
             
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel){action in
+            let cancelAction = UIAlertAction(title: "İptal", style: .cancel){action in
         
             }
             alert.addAction(cancelAction)
             
-            let yesAction = UIAlertAction(title: "Yes", style: .destructive){action in
+            let yesAction = UIAlertAction(title: "Evet", style: .destructive){action in
                 self.basketPresenter?.delete(basketFoodId: (food.sepet_yemek_id!), userName: self.userName!)
                 
             }

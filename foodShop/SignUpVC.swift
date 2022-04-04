@@ -43,12 +43,12 @@ class SignUpVC: UIViewController {
             emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
         {
-            return "Please fill in all fields"
+            return "Lütfen tüm alanları doldurun"
         }
         let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         if Utilities.isPasswordValid(cleanedPassword) == false {
             
-            return "Please make sure your password is at least 8 characters, contains a special and a number"
+            return "Şifreniz en az 8 karakter olmalı ve en az 1 özel karakter içermelidir"
         }
         
         return nil
@@ -78,7 +78,8 @@ class SignUpVC: UIViewController {
                 }else{
                     //User was created succesfully, now store the first name and last name
                     let db = Firestore.firestore()
-                    db.collection("users").addDocument(data: ["name":name,"surname":surname,"uid":result!.user.uid]){(error) in
+                    db.collection("users").document(String(result!.user.uid)).setData(["name":name,"surname":surname,"uid":result!.user.uid]){(error) in
+                    
                         
                         if error != nil {
                             //Show error message
@@ -100,9 +101,7 @@ class SignUpVC: UIViewController {
     }
     func transitionToHome(){
         performSegue(withIdentifier: "signToHome", sender: nil)
-        //let homeViewPage = storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? HomePageVC
-        //view.window?.rootViewController = homeViewPage
-        //view.window?.makeKeyAndVisible()
+        
     }
     
 }

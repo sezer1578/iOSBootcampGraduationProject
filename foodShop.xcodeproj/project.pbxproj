@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0002CF1627F85FED00BD15C0 /* ProfilePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0002CF1527F85FED00BD15C0 /* ProfilePageVC.swift */; };
 		00393FFC27F4B46A0021D31F /* AddToBasketProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00393FFB27F4B46A0021D31F /* AddToBasketProtocols.swift */; };
 		00393FFE27F4BC780021D31F /* AddToBasketInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00393FFD27F4BC780021D31F /* AddToBasketInteractor.swift */; };
 		0039400027F4BC9A0021D31F /* AddToBasketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00393FFF27F4BC9A0021D31F /* AddToBasketPresenter.swift */; };
@@ -38,7 +39,6 @@
 		0044AE0027F1DADC00A89D36 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0044ADFF27F1DADC00A89D36 /* LoginVC.swift */; };
 		0044AE0227F1DDEF00A89D36 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0044AE0127F1DDEF00A89D36 /* Utilities.swift */; };
 		0044AE0527F1EE0800A89D36 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0044AE0427F1EE0800A89D36 /* Constants.swift */; };
-		0044AE0A27F1F62900A89D36 /* FoodIntro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0044AE0927F1F62900A89D36 /* FoodIntro.mp4 */; };
 		0080E19D27F32098006FBEDF /* FoodDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0080E19C27F32098006FBEDF /* FoodDetailVC.swift */; };
 		0080E19F27F3275A006FBEDF /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0080E19E27F3275A006FBEDF /* Food.swift */; };
 		0080E1A127F328A9006FBEDF /* FoodBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0080E1A027F328A9006FBEDF /* FoodBasket.swift */; };
@@ -68,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0002CF1527F85FED00BD15C0 /* ProfilePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageVC.swift; sourceTree = "<group>"; };
 		00393FFB27F4B46A0021D31F /* AddToBasketProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToBasketProtocols.swift; sourceTree = "<group>"; };
 		00393FFD27F4BC780021D31F /* AddToBasketInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToBasketInteractor.swift; sourceTree = "<group>"; };
 		00393FFF27F4BC9A0021D31F /* AddToBasketPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToBasketPresenter.swift; sourceTree = "<group>"; };
@@ -101,7 +102,6 @@
 		0044ADFF27F1DADC00A89D36 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0044AE0127F1DDEF00A89D36 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		0044AE0427F1EE0800A89D36 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		0044AE0927F1F62900A89D36 /* FoodIntro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FoodIntro.mp4; sourceTree = "<group>"; };
 		0080E19C27F32098006FBEDF /* FoodDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailVC.swift; sourceTree = "<group>"; };
 		0080E19E27F3275A006FBEDF /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		0080E1A027F328A9006FBEDF /* FoodBasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBasket.swift; sourceTree = "<group>"; };
@@ -204,6 +204,7 @@
 		0039400327F4C0D20021D31F /* foodbasket-module */ = {
 			isa = PBXGroup;
 			children = (
+				006E4C3A27F5D31A006EEE1D /* tableview */,
 				0039400827F4C0FD0021D31F /* view */,
 				0039400727F4C0F70021D31F /* router */,
 				0039400627F4C0F20021D31F /* presenter */,
@@ -256,6 +257,7 @@
 		0039401627F4D38A0021D31F /* homepage-module */ = {
 			isa = PBXGroup;
 			children = (
+				006E4C3927F5D308006EEE1D /* tableview */,
 				0039401D27F4D3D50021D31F /* view */,
 				0039401C27F4D3CD0021D31F /* router */,
 				0039401927F4D3B40021D31F /* presenter */,
@@ -332,7 +334,6 @@
 			children = (
 				0044ADF927F1CCC300A89D36 /* GoogleService-Info.plist */,
 				0044ADC927F1CA1000A89D36 /* AppDelegate.swift */,
-				0044AE0627F1F15000A89D36 /* Media */,
 				0044AE0327F1E1D700A89D36 /* Helpers */,
 				0080E1A227F328B0006FBEDF /* Model */,
 				00393FF527F4B3840021D31F /* addfood-module */,
@@ -341,9 +342,8 @@
 				0044ADCD27F1CA1000A89D36 /* SplashVC.swift */,
 				0044ADCB27F1CA1000A89D36 /* SceneDelegate.swift */,
 				0044ADCF27F1CA1100A89D36 /* Main.storyboard */,
-				0080E1A527F34F8E006FBEDF /* BasketTableViewCell.swift */,
-				0080E1A327F332F0006FBEDF /* FoodTableViewCell.swift */,
 				0044ADFF27F1DADC00A89D36 /* LoginVC.swift */,
+				0002CF1527F85FED00BD15C0 /* ProfilePageVC.swift */,
 				0044ADFD27F1D80900A89D36 /* SignUpVC.swift */,
 				0044ADD227F1CA1200A89D36 /* Assets.xcassets */,
 				0044ADD427F1CA1200A89D36 /* LaunchScreen.storyboard */,
@@ -378,12 +378,20 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		0044AE0627F1F15000A89D36 /* Media */ = {
+		006E4C3927F5D308006EEE1D /* tableview */ = {
 			isa = PBXGroup;
 			children = (
-				0044AE0927F1F62900A89D36 /* FoodIntro.mp4 */,
+				0080E1A327F332F0006FBEDF /* FoodTableViewCell.swift */,
 			);
-			path = Media;
+			path = tableview;
+			sourceTree = "<group>";
+		};
+		006E4C3A27F5D31A006EEE1D /* tableview */ = {
+			isa = PBXGroup;
+			children = (
+				0080E1A527F34F8E006FBEDF /* BasketTableViewCell.swift */,
+			);
+			path = tableview;
 			sourceTree = "<group>";
 		};
 		0080E1A227F328B0006FBEDF /* Model */ = {
@@ -539,7 +547,6 @@
 			files = (
 				0044ADD627F1CA1200A89D36 /* LaunchScreen.storyboard in Resources */,
 				0044ADFA27F1CCC400A89D36 /* GoogleService-Info.plist in Resources */,
-				0044AE0A27F1F62900A89D36 /* FoodIntro.mp4 in Resources */,
 				0044ADD327F1CA1200A89D36 /* Assets.xcassets in Resources */,
 				0044ADD127F1CA1100A89D36 /* Main.storyboard in Resources */,
 			);
@@ -690,6 +697,7 @@
 				0039402327F4D5680021D31F /* HomePagePresenter.swift in Sources */,
 				0044ADFE27F1D80900A89D36 /* SignUpVC.swift in Sources */,
 				0039402127F4D5530021D31F /* HomePageInteractor.swift in Sources */,
+				0002CF1627F85FED00BD15C0 /* ProfilePageVC.swift in Sources */,
 				0039400A27F4C1250021D31F /* BasketProtocols.swift in Sources */,
 				0039400E27F4C13E0021D31F /* BasketPresenter.swift in Sources */,
 				0039401027F4C1470021D31F /* BasketRouter.swift in Sources */,

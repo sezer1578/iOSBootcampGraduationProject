@@ -18,6 +18,9 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
 
         setUpElements()
+        autoLogin()
+        
+       
     }
     func setUpElements(){
         
@@ -28,6 +31,20 @@ class LoginVC: UIViewController {
         Utilities.styleTextField(emailTextField)
         Utilities.styleTextField(passwordTextField)
         Utilities.styleFilledButton(loginButton)
+    }
+    func autoLogin(){
+        let ud = UserDefaults.standard
+        ud.set(emailTextField.text!, forKey: "email")
+        ud.set(passwordTextField.text!, forKey: "passw" )
+       
+        let loginDetails = UserDefaults.standard.value(forKey: "email")
+        if loginDetails != nil && Auth.auth().currentUser != nil {
+            emailTextField.text = UserDefaults.standard.value(forKey: "email") as? String
+            passwordTextField.text = UserDefaults.standard.value(forKey: "passw") as? String
+            performSegue(withIdentifier: "logintoHome", sender: nil)
+        }
+        
+            
     }
 
     @IBAction func loginTapped(_ sender: Any) {
@@ -42,13 +59,11 @@ class LoginVC: UIViewController {
         Auth.auth().signIn(withEmail: email, password: password){(result, error) in
             if error != nil {
                 //Coulndn't sign in
-                self.errorLabel.text = error!.localizedDescription
+                self.errorLabel.text = "Email veya şifre yanlıştır"
                 self.errorLabel.alpha = 1
             }else{
                 self.performSegue(withIdentifier: "logintoHome", sender: nil)
-               // let homeViewPage = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? HomePageVC
-               // self.view.window?.rootViewController = homeViewPage
-                //self.view.window?.makeKeyAndVisible()
+               
             }
         }
     }

@@ -18,6 +18,7 @@ class FoodDetailVC: UIViewController {
     @IBOutlet weak var foodPriceLabel: UILabel!
     @IBOutlet weak var foodNameLabel: UILabel!
     @IBOutlet weak var foodImage: UIImageView!
+    @IBOutlet weak var basketbtn: UIButton!
     
     var food:Food?
     var foodBasket:FoodBasket?
@@ -26,13 +27,16 @@ class FoodDetailVC: UIViewController {
     var userName = Auth.auth().currentUser?.email
     var addtoBasketPresenter : ViewToPresenterAddToBasketProtocol?
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         showUI()
         
         AddToBasketRouter.createModule(ref: self)
         
-        foodOrderedLabel.text = "1"
+        //foodOrderedLabel.text = "1"
+        self.navigationController?.navigationBar.isHidden = false
         
        
         
@@ -57,12 +61,22 @@ class FoodDetailVC: UIViewController {
     
     @IBAction func buttonAddBasket(_ sender: Any) {
         
-        
+        var quantity:Int?
+        var price:Int?
+        var sumPrice:Int?
         
         if let fImage = food?.yemek_resim_adi, let fName = foodNameLabel.text, let foodPrice = foodPriceLabel.text,
            let fOrdered = foodOrderedLabel.text, let userName = userName{
             
-            addtoBasketPresenter?.add(foodImageName: fImage, foodName: fName, foodPrice: foodPrice, foodOrdered: fOrdered, userName: userName )
+            quantity = Int(fOrdered)
+            price = Int(foodPrice)
+            
+            if(quantity! >= 1) {
+                sumPrice = quantity! * price!
+            }
+            let price = String(sumPrice!)
+            
+            addtoBasketPresenter?.add(foodImageName: fImage, foodName: fName, foodPrice: price, foodOrdered: fOrdered, userName: userName )
         }
         
     }
@@ -76,13 +90,15 @@ class FoodDetailVC: UIViewController {
         topView.layer.shadowOpacity = 1.0
         topView.layer.shadowOffset = CGSize(width: 3, height: 3)
       
-        
         //Bottom View UI
         bottomView.layer.cornerRadius = 100
         bottomView.layer.maskedCorners = [.layerMaxXMinYCorner]
         bottomView.layer.shadowRadius = 2
         bottomView.layer.shadowOpacity = 0.3
         bottomView.layer.shadowOffset = CGSize(width: 3, height: 3)
+        
+        //Button design
+        Utilities.styleFilledButton(basketbtn)
        
     }
 
