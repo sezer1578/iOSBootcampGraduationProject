@@ -51,6 +51,14 @@ class Utilities {
         button.layer.cornerRadius = 25.0
         button.tintColor = UIColor(named: "mainColor")
     }
+    static func styleHollowButtonTwo(_ button:UIButton) {
+        
+        // Hollow rounded corner style
+        button.layer.borderWidth = 2
+        button.layer.borderColor = UIColor(named: "myOrange")?.cgColor
+        button.layer.cornerRadius = 25.0
+        button.tintColor = UIColor(named: "myOrange")
+    }
     
     static func isPasswordValid(_ password : String) -> Bool {
         

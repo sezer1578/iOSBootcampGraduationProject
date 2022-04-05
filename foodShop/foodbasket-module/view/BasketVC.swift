@@ -9,6 +9,9 @@ import UIKit
 import FirebaseAuth
 
 class BasketVC: UIViewController {
+   
+    @IBOutlet weak var buttonOrder: UIButton!
+    @IBOutlet weak var totalPrice: UILabel!
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var basketTableView: UITableView!
@@ -53,6 +56,8 @@ class BasketVC: UIViewController {
         bottomView.layer.shadowOpacity = 0.3
         bottomView.layer.shadowOffset = CGSize(width: 3, height: 3)
         
+        Utilities.styleHollowButtonTwo(buttonOrder)
+        
        
         
     }
@@ -82,6 +87,14 @@ extension BasketVC : UITableViewDelegate, UITableViewDataSource {
                     cell.basketFoodImageView.kf.setImage(with:url)
                 }
             }
+        
+        var total = 0
+        for data in foodList {
+            
+            total = total + ((Int(data.yemek_fiyat!) ?? 0))
+        }
+        totalPrice.text = "Sepet Tutarı: \(String(total)) ₺"
+        
         cell.basketFoodNameLabel.text = foodBasket.yemek_adi
         cell.basketFoodPriceLabel.text = "Fiyat: \(foodBasket.yemek_fiyat!) ₺"
         cell.basketFoodOrderedLabel.text = "Adet: \(foodBasket.yemek_siparis_adet!)"
